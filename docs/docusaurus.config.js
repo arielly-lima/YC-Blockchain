@@ -11,10 +11,9 @@ const config = {
     v4: true,
   },
 
-  // Substitua estes valores quando o endereço de publicação for definido.
-  url: 'https://example.com',
-  baseUrl: '/',
-  organizationName: 'youth-challenge-blockchain',
+  url: 'https://arielly-lima.github.io',
+  baseUrl: '/YC-Blockchain/',
+  organizationName: 'arielly-lima',
   projectName: 'YC-Blockchain',
 
   onBrokenLinks: 'throw',
