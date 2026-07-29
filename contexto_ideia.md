@@ -20,13 +20,25 @@ O contexto apresentado pelo hackathon evidencia que milhões de crianças brasil
 
 A proposta é fundamentada pela Iniciação Científica **“Desenvolvimento e Avaliação de Mecanismos de Gamificação para Engajamento na Coleta de Dados de Voz em Interfaces Acessíveis”**.
 
+A **Comunicação Aumentativa e Alternativa (CAA)** reúne recursos, estratégias e práticas que ampliam ou complementam a fala. O ASR pode potencializar interfaces de CAA ao converter voz em texto, comandos ou intenções, mas não é sinônimo de CAA e não substitui outras formas de comunicação.
+
 A IC parte do seguinte problema:
 
 * sistemas de Reconhecimento Automático de Fala, ou ASR, são treinados principalmente com grandes bases de fala considerada padrão;
 * pessoas com fala não padrão, incluindo pessoas com TEA, Síndrome de Down, paralisia cerebral e condições neurológicas, apresentam padrões acústicos diversos e pouco representados nesses bancos;
-* modelos personalizados podem exigir aproximadamente 30 a 60 minutos de áudio por usuário;
+* não existe um volume universal de áudio que garanta uma personalização individual; a necessidade varia conforme pessoa, tarefa, qualidade, diversidade e técnica de adaptação;
 * a coleta tradicional por repetição de frases apresenta baixa adesão, abandono elevado e pouca diversidade fonética;
 * sem dados suficientes, torna-se difícil personalizar modelos para compreender cada pessoa.
+
+É necessário separar três escalas:
+
+* **pré-treinamento:** construir um ASR do zero exige centenas ou milhares de horas; o Whisper utilizou 680 mil horas e o wav2vec 2.0 foi pré-treinado com até 53 mil horas;
+* **adaptação coletiva:** usa dados autorizados de várias pessoas para melhorar a representação de fala não padrão;
+* **personalização individual:** ajusta um modelo já pré-treinado e pode apresentar ganhos com poucos minutos em cenários restritos, mas não possui um limite fixo nem garantia de robustez.
+
+O projeto não pretende treinar um ASR do zero com a voz da criança. Ele parte de modelos pré-treinados e investiga adaptações coletivas e pessoais mensuradas por experimentos.
+
+No Brasil, o Censo 2022 identificou 14,4 milhões de pessoas com deficiência, cerca de 2,7 milhões em uma categoria de dificuldade permanente que inclui comunicar-se e 2,4 milhões de pessoas diagnosticadas com autismo. Entre crianças de 5 a 9 anos, o percentual de diagnóstico de autismo foi de 2,6%. Esses grupos não são equivalentes à população com fala não padrão, mas ajudam a dimensionar barreiras de comunicação e acessibilidade.
 
 A IC propõe enfrentar esse gargalo por meio de:
 
@@ -462,7 +474,7 @@ O ASR pode compreender corretamente uma palavra mesmo quando ainda existe uma ca
 
 ## 13. Uso da Psyche Network
 
-A equipe pretende utilizar a **Psyche Network** como infraestrutura de treinamento distribuído.
+A equipe pretende utilizar a **Psyche Network** como infraestrutura de treinamento distribuído. Em sua implementação descentralizada, a Psyche utiliza a **Solana** como camada de coordenação on-chain: o Coordinator mantém o estado da run, o Authorizer controla a entrada de clientes e carteiras identificam participantes.
 
 A Psyche será utilizada nos ciclos de treinamento, não necessariamente durante a interação em tempo real.
 
@@ -474,6 +486,8 @@ Validação das amostras
 Criação de uma versão do dataset
           ↓
 Execução distribuída na Psyche
+          ↓
+Coordenação da run na Solana
           ↓
 Novo modelo ou adaptador
           ↓
@@ -494,6 +508,8 @@ Participantes possíveis:
 
 Por envolver dados de crianças, os treinamentos devem ocorrer em runs privadas ou permissionadas.
 
+Os clientes executam o processamento em GPUs independentes e trocam resultados pela rede peer-to-peer. Áudio, dataset e checkpoints não devem ser armazenados na Solana.
+
 A equipe precisará adaptar a infraestrutura para ASR, incluindo:
 
 * processamento de áudio;
@@ -511,9 +527,14 @@ Essa integração deve ser apresentada como componente experimental e risco téc
 
 ## 14. Papel da blockchain
 
-A blockchain não armazena áudio.
+A blockchain não armazena áudio. O diferencial central é usar a Psyche para descentralizar o treinamento, com participantes e etapas da run coordenados na Solana.
 
-Ela funciona como camada de:
+Existem duas responsabilidades complementares:
+
+* **Psyche/Solana:** coordenação da run, autorização de clientes, estado do treinamento e contribuições computacionais;
+* **governança da aplicação:** consentimento, proveniência, versões, revogação e financiamento social.
+
+A camada de governança funciona como registro de:
 
 * governança;
 * consentimento;
@@ -532,7 +553,7 @@ Pode registrar:
 * instituições autorizadas;
 * hash do dataset;
 * versão do dataset;
-* execução na Psyche;
+* referência da run Psyche/Solana;
 * participantes;
 * configuração do treinamento;
 * hash do modelo resultante;
@@ -568,7 +589,7 @@ A blockchain permite responder:
 * O consentimento continua ativo?
 * Qual aplicação usa o modelo?
 
-A necessidade da blockchain surge porque várias instituições precisam colaborar sem que uma única empresa controle ou altere todo o histórico.
+A necessidade da blockchain surge porque várias instituições e provedores de computação precisam treinar e governar modelos em conjunto sem que uma única empresa controle a infraestrutura ou altere todo o histórico.
 
 ---
 
@@ -804,8 +825,8 @@ Demonstra:
 
 * consentimento;
 * versão do dataset;
-* execução;
-* participantes;
+* referência da run Psyche/Solana;
+* carteiras ou instituições participantes;
 * modelo resultante;
 * vaga social patrocinada.
 
@@ -815,10 +836,11 @@ Narrativa de demonstração:
 2. A criança realiza atividades gamificadas.
 3. O responsável ou profissional valida algumas intenções.
 4. O sistema organiza uma versão autorizada do dataset.
-5. Um adaptador é treinado.
-6. O modelo personalizado melhora em novas frases.
-7. O painel mostra a evolução técnica.
-8. A blockchain mostra origem, autorização e uso dos dados.
+5. Participantes autorizados ingressam em uma run permissionada.
+6. Um adaptador é treinado ou a etapa experimental é demonstrada com dados seguros.
+7. O modelo personalizado é avaliado em novas frases.
+8. O painel mostra a evolução técnica.
+9. A Solana e a governança mostram o vínculo entre autorização, run e modelo.
 
 Para o protótipo, podem ser usados dados simulados, áudios públicos compatíveis ou gravações de adultos voluntários.
 
@@ -830,14 +852,16 @@ Para o protótipo, podem ser usados dados simulados, áudios públicos compatív
 
 A solução integra:
 
+* CAA como base de comunicação ampliada;
 * prática de comunicação;
 * coleta gamificada;
 * ASR personalizado;
-* treinamento distribuído;
+* treinamento distribuído pela Psyche;
+* coordenação das runs na Solana;
 * governança;
 * financiamento social.
 
-A blockchain conecta consentimentos, datasets, execuções, modelos e financiadores.
+A blockchain coordena a run descentralizada e conecta consentimentos, datasets, execuções, modelos e financiadores sem armazenar a voz infantil.
 
 ### Escalabilidade
 
@@ -911,7 +935,7 @@ A criança é beneficiária; clientes e financiadores são instituições.
 
 ## 23. Síntese principal
 
-> O projeto é uma plataforma acessível e gamificada de apoio à comunicação para crianças com fala não padrão. A criança participa de missões de voz que estimulam sua comunicação e, com consentimento, constroem progressivamente um banco de dados capaz de personalizar um sistema de reconhecimento de fala. Quando existe acompanhamento fonoaudiológico, o profissional configura objetivos, atividades e feedbacks individuais. Quando não existe acesso ao profissional, a criança utiliza uma trilha gratuita de atividades gerais, seguras e previamente validadas, sem diagnóstico ou tratamento automático. A Psyche viabiliza o treinamento distribuído dos modelos entre instituições autorizadas, enquanto a blockchain registra consentimentos, versões dos datasets, origem dos modelos, contribuições computacionais e financiamento de vagas sociais. Assim, o projeto cria um ciclo em que prática gera dados, dados melhoram a tecnologia e uma tecnologia mais inclusiva amplia a autonomia e o engajamento da criança.
+> O projeto é uma plataforma acessível e gamificada de apoio à comunicação para crianças com fala não padrão. A solução incorpora princípios de CAA e usa missões de voz como uma possibilidade de interação, sem substituir outras formas de comunicação. Com consentimento, as atividades constroem progressivamente dados capazes de personalizar um ASR pré-treinado; não se pretende treinar um modelo do zero com a voz da criança. Quando existe acompanhamento fonoaudiológico, o profissional configura objetivos, atividades e feedbacks individuais. Quando não existe acesso ao profissional, a criança utiliza uma trilha gratuita de atividades gerais, seguras e previamente validadas, sem diagnóstico ou tratamento automático. A Psyche distribui experimentalmente o treinamento entre instituições autorizadas, com runs permissionadas coordenadas na Solana. Áudios e dados clínicos permanecem criptografados fora da blockchain, enquanto a governança vincula consentimentos, datasets, execuções, modelos, contribuições computacionais e vagas sociais. Assim, prática gera dados, dados melhoram a tecnologia e uma tecnologia mais inclusiva amplia a autonomia da criança.
 
 ---
 
@@ -920,6 +944,7 @@ A criança é beneficiária; clientes e financiadores são instituições.
 Ao auxiliar no desenvolvimento deste projeto:
 
 * não apresente a solução como substituta de fonoaudiólogos;
+* não trate CAA e ASR como sinônimos nem torne a voz o único meio de interação;
 * diferencie estímulo geral, prática supervisionada e tratamento clínico;
 * não proponha armazenamento de áudio ou diagnóstico na blockchain;
 * trate voz infantil como dado altamente sensível;
@@ -927,8 +952,10 @@ Ao auxiliar no desenvolvimento deste projeto:
 * priorize atividades curtas, acessíveis e não punitivas;
 * não compare crianças;
 * não use score de normalidade;
-* justifique a blockchain por governança multi-institucional, auditabilidade e financiamento transparente;
-* justifique a Psyche pelo treinamento distribuído;
+* não use uma duração fixa de áudio como requisito universal de personalização;
+* diferencie pré-treinamento, adaptação coletiva e personalização individual;
+* justifique a blockchain pela coordenação descentralizada na Psyche/Solana e pela governança multi-institucional;
+* justifique a Psyche pelo treinamento distribuído entre GPUs independentes;
 * reconheça que a integração entre Psyche e ASR é experimental;
 * priorize um MVP pequeno, demonstrável e seguro;
 * relacione decisões aos cinco critérios do hackathon;
@@ -943,3 +970,9 @@ Ao auxiliar no desenvolvimento deste projeto:
 * Youth Challenge Blockchain: https://www.youthchallengeblockchain.com/
 * Psyche Network: https://psyche.network/
 * Documentação da Psyche: https://docs.psyche.network/
+* Arquitetura descentralizada da Psyche: https://docs.psyche.network/explain/index.html
+* Execução da Psyche na Solana: https://docs.psyche.network/development/running-onchain.html
+* Whisper: https://arxiv.org/abs/2212.04356
+* wav2vec 2.0: https://arxiv.org/abs/2006.11477
+* IBGE — pessoas com deficiência: https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/43463-censo-2022-brasil-tem-14-4-milhoes-de-pessoas-com-deficiencia
+* IBGE — pessoas diagnosticadas com autismo: https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/43464-censo-2022-identifica-2-4-milhoes-de-pessoas-diagnosticadas-com-autismo-no-brasil

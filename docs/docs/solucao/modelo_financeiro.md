@@ -42,7 +42,7 @@ receita institucional + patrocínio
   → resultados agregados auditáveis
 ```
 
-Empresas e fundações podem financiar acesso, supervisão profissional ou computação. A blockchain registra quantidade de vagas, instituição responsável e resultados agregados, sem identificar crianças.
+Empresas e fundações podem financiar acesso, supervisão profissional ou computação. A governança on-chain registra quantidade de vagas, instituição responsável e resultados agregados, sem identificar crianças.
 
 ## Estrutura de custos
 

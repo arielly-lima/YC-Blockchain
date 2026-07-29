@@ -13,7 +13,7 @@ responsável conhece a proposta
   → recebe explicação acessível
   → escolhe finalidades autorizadas
   → criança participa do assentimento quando aplicável
-  → preferências de acessibilidade são configuradas
+  → preferências de acessibilidade e comunicação são configuradas
 ```
 
 Usar o aplicativo não significa autorizar automaticamente pesquisa, treinamento coletivo ou uso comercial. Cada finalidade deve possuir autorização própria.
@@ -23,7 +23,7 @@ Usar o aplicativo não significa autorizar automaticamente pesquisa, treinamento
 | Etapa | Experiência | Resposta do sistema |
 | --- | --- | --- |
 | Escolha | seleciona tema ou personagem | respeita interesses e reduz carga cognitiva |
-| Missão | fala em um contexto de história | grava apenas quando autorizado |
+| Missão | usa voz ou recurso complementar em uma história | grava apenas quando autorizado |
 | Retorno | recebe feedback visual positivo | não pune erro ou ausência |
 | Progresso | desbloqueia novas atividades | equilibra variedade e dificuldade |
 | Encerramento | conclui uma sessão curta | registra fadiga e preferências |
@@ -69,6 +69,7 @@ A criança pode começar no modo gratuito e ingressar posteriormente em acompanh
 
 - consentimento precisa ser compreensível e revogável;
 - sessões devem respeitar fadiga e sobrecarga sensorial;
+- o produto não pode retirar ou desvalorizar recursos de CAA já utilizados pela criança;
 - falhas não podem produzir mensagens punitivas;
 - a família precisa distinguir compreensão técnica de avaliação clínica;
 - o profissional deve acessar apenas os dados necessários.

@@ -15,6 +15,7 @@ São especialmente relevantes:
 - crianças sem acesso regular à fonoaudiologia;
 - crianças em filas de espera;
 - crianças que praticam entre sessões profissionais;
+- crianças que utilizam recursos de CAA e podem se beneficiar de uma interação de voz complementar;
 - crianças cujas formas de falar são pouco representadas em datasets;
 - famílias que buscam tecnologias assistivas mais inclusivas.
 
@@ -46,5 +47,5 @@ São especialmente relevantes:
 O primeiro piloto deve ter escopo reduzido e acompanhamento especializado. Para proteger crianças, o protótipo do hackathon deve priorizar dados simulados, dados públicos compatíveis ou gravações de adultos voluntários.
 
 :::info Princípio de desenho
-O sistema é adaptado à criança; a criança não precisa adaptar sua forma de falar para satisfazer o sistema.
+O sistema é adaptado à criança; a criança não precisa adaptar sua forma de falar para satisfazer o sistema. A voz é uma possibilidade de interação, não a única.
 :::
