@@ -25,6 +25,7 @@ sidebar_position: 6
 
 - criar história curta;
 - implementar gravação sinalizada;
+- permitir formas complementares de resposta inspiradas em CAA;
 - oferecer escolha e feedback positivo;
 - permitir confirmação de intenção;
 - testar em dispositivos móveis.
@@ -35,25 +36,31 @@ sidebar_position: 6
 
 **Objetivo:** provar personalização mensurável.
 
-- integrar modelo-base em português;
+- integrar um modelo pré-treinado em português;
+- documentar separadamente modelo-base, adaptação coletiva e adaptador pessoal;
 - validar qualidade das amostras;
 - versionar dataset;
 - treinar adaptador;
 - comparar WER, CER e acerto de intenção.
 
-**Critério de avanço:** comparação reproduzível entre modelo-base e adaptado.
+**Critério de avanço:** comparação reproduzível entre modelo-base e adaptado, sem alegar um volume fixo de áudio como garantia de personalização.
 
-## Fase 4 — Governança blockchain
+## Fase 4 — Psyche, Solana e governança
 
-**Objetivo:** demonstrar proveniência e autorização.
+**Objetivo:** demonstrar treinamento descentralizado permissionado e sua proveniência.
 
+- criar uma run pequena na Psyche/Solana;
+- configurar Coordinator e Authorizer;
+- autorizar carteiras de clientes participantes;
+- testar a execução em localnet ou devnet antes de dados sensíveis;
+- adaptar ou especificar o pipeline necessário para áudio;
 - registrar consentimento por finalidade;
 - vincular hash do dataset;
-- registrar execução e modelo;
+- vincular a run ao modelo resultante;
 - demonstrar revogação;
 - registrar vaga social simulada.
 
-**Critério de avanço:** trilha auditável sem dados pessoais on-chain.
+**Critério de avanço:** run reproduzível e trilha auditável entre autorização, dataset, participantes, execução e modelo, sem dados pessoais on-chain.
 
 ## Fase 5 — Painel profissional
 
@@ -85,10 +92,12 @@ sidebar_position: 6
 | --- | --- |
 | P0 | missão de voz funcional |
 | P0 | comparação técnica do ASR |
-| P0 | consentimento e proveniência demonstráveis |
+| P0 | run permissionada mínima na Psyche/Solana |
+| P0 | consentimento, dataset, run e modelo vinculados |
 | P1 | painel profissional mínimo |
+| P1 | adaptação experimental da Psyche para áudio |
 | P1 | narrativa de impacto e modelo financeiro |
-| P2 | integração completa com Psyche |
+| P2 | escala multi-institucional e incentivos de computação |
 
 :::tip Controle de escopo
 É melhor demonstrar um fluxo pequeno, seguro e verificável do que apresentar muitos módulos sem integração real.

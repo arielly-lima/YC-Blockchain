@@ -36,7 +36,11 @@ O YC Blockchain combina:
 3. separação entre compreensão e avaliação clínica;
 4. supervisão em diferentes níveis;
 5. consentimento e proveniência verificáveis;
-6. treinamento distribuído entre instituições autorizadas.
+6. treinamento distribuído pela Psyche entre instituições autorizadas;
+7. coordenação verificável das runs descentralizadas na Solana;
+8. integração de ASR como complemento a estratégias de CAA.
+
+O projeto não comercializa voz infantil nem propõe treinar um ASR do zero com gravações individuais. O valor econômico está nos serviços, painéis, APIs, governança e infraestrutura de treinamento.
 
 ## Clientes e financiadores
 

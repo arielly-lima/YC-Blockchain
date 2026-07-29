@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # Proposta de valor
 
-O YC Blockchain transforma a prática de comunicação em uma experiência acessível que também produz, mediante consentimento, dados úteis para personalizar tecnologias de voz.
+O YC Blockchain transforma a prática de comunicação em uma experiência acessível que também produz, mediante consentimento, dados úteis para personalizar tecnologias de voz. A solução aproxima CAA e ASR sem confundi-los: amplia possibilidades de comunicação e adapta a tecnologia à criança, em vez de exigir que a criança se aproxime de uma fala padrão.
 
 ## Promessa central
 
@@ -22,6 +22,18 @@ O YC Blockchain transforma a prática de comunicação em uma experiência acess
 | **Instituição** | dificuldade de ampliar atendimento | supervisão em escala e resultados agregados |
 | **Tecnologia assistiva** | modelos pouco inclusivos | infraestrutura para ASR adaptado e governado |
 | **Financiador** | dificuldade de acompanhar impacto | vagas e resultados verificáveis sem expor crianças |
+
+## Diferencial tecnológico
+
+O diferencial não é usar blockchain como banco de dados. É combinar:
+
+1. coleta contextualizada e autorizada;
+2. adaptação progressiva de modelos ASR pré-treinados;
+3. treinamento distribuído pela Psyche Network;
+4. coordenação verificável das runs descentralizadas na Solana;
+5. governança multi-institucional sem expor a voz infantil on-chain.
+
+> **Não descentralizamos a voz das crianças. Descentralizamos, de forma permissionada, a capacidade computacional usada para construir uma IA que as compreenda.**
 
 ## Três ofertas conectadas
 
@@ -45,6 +57,7 @@ Trilha individual configurada por fonoaudiólogo, com objetivos, vocabulário, p
 - **Não punição:** sem perda de recompensas por ausência ou falha.
 - **Não comparação:** sem rankings públicos entre crianças.
 - **Privacidade:** uso mínimo de dados e controle pela família.
+- **Não exploração:** serviços, infraestrutura e resultados são comercializados; áudios brutos e voz infantil não são produtos.
 
 ## Resultado esperado
 

@@ -23,14 +23,15 @@ sidebar_position: 2
                     ↓
      ┌──────────────┴──────────────┐
      ↓                             ↓
-┌──────────────┐          ┌─────────────────┐
-│ Dados        │          │ Governança      │
-│ criptografados│         │ blockchain      │
-└──────┬───────┘          └─────────────────┘
-       ↓
-┌─────────────────────────┐
-│ Pipeline de ASR e Psyche │
-└─────────────────────────┘
+┌─────────────────┐       ┌──────────────────┐
+│ Dados privados  │       │ Governança       │
+│ criptografados  │       │ hashes e consent.│
+└────────┬────────┘       └────────┬─────────┘
+         ↓                         ↓
+┌─────────────────┐       ┌──────────────────┐
+│ Pipeline ASR    │◄─────►│ Psyche + Solana  │
+│ e adaptadores   │       │ run permissionada│
+└─────────────────┘       └──────────────────┘
 ```
 
 ## Aplicativo infantil
@@ -75,20 +76,24 @@ A seleção da próxima missão considera:
   → validação da intenção
   → pseudonimização
   → versão do dataset
-  → treinamento
+  → adaptação local ou run permissionada na Psyche/Solana
   → avaliação WER, CER e intenção
   → publicação controlada do adaptador
 ```
+
+O sistema parte de um ASR pré-treinado. O modelo-base, a adaptação coletiva e o adaptador pessoal possuem escalas de dados diferentes; nenhum número fixo de minutos é tratado como garantia de personalização.
 
 ## Separação de responsabilidades
 
 | Componente | Responsabilidade | Não deve fazer |
 | --- | --- | --- |
+| CAA | ampliar ou complementar formas de comunicação | depender exclusivamente do reconhecimento de voz |
 | ASR de compreensão | transcrever ou identificar intenção | avaliar habilidade clínica |
 | Avaliador de atividade | analisar objetivo definido | operar sem supervisão profissional |
-| Blockchain | registrar autorização e proveniência | armazenar áudio ou prontuário |
+| Governança blockchain | vincular autorização, dataset, run e modelo | armazenar áudio ou prontuário |
 | Armazenamento privado | guardar dados criptografados | expor dados publicamente |
-| Psyche | treinamento distribuído autorizado | processar runs públicas com dados infantis |
+| Psyche | distribuir o treinamento entre clientes autorizados | processar dados infantis em runs permissionless |
+| Solana | coordenar estado, participantes e etapas da run | armazenar áudio ou executar inferência em tempo real |
 
 ## Requisitos transversais
 

@@ -16,8 +16,8 @@ Esta página está preparada para receber os nomes e contatos da equipe. Para o 
 | **UX e acessibilidade** | experiência infantil, linguagem, testes e inclusão |
 | **Frontend** | aplicativo de missões e painel profissional |
 | **Backend e dados** | API, permissões, armazenamento e versionamento |
-| **IA e áudio** | pipeline, ASR, adaptação e avaliação |
-| **Blockchain** | consentimento, hashes, auditoria e integração |
+| **IA e áudio** | pipeline, ASR pré-treinado, adaptação, integração Psyche e avaliação |
+| **Blockchain** | Solana, autorização da run, hashes, proveniência e auditoria |
 | **Segurança e ética** | privacidade, riscos, incidentes e governança |
 | **Negócios e impacto** | parceiros, sustentabilidade, ODS e métricas |
 
