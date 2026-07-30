@@ -11,7 +11,7 @@ sidebar_position: 2
 ```text
 ┌──────────────────────────────┐
 │ dados privados off-chain     │
-│ áudio · transcrição · clínica│
+│ áudio · transcrição · contexto│
 │ datasets · checkpoints       │
 └──────────────┬───────────────┘
                │ acesso autorizado
@@ -41,7 +41,7 @@ sidebar_position: 2
 | --- | --- | --- |
 | voz | áudio, transcrição e qualidade | criptografia e acesso mínimo |
 | identificação | nome, contato e documentos | separação e pseudonimização |
-| clínica | diagnóstico, objetivos e relatórios | acesso profissional autorizado |
+| contexto de uso | preferências, frases e intenções esperadas | acesso controlado pela família |
 | modelos pessoais | adaptadores e checkpoints | armazenamento privado |
 
 ## Registros on-chain
@@ -62,11 +62,11 @@ sidebar_position: 2
 
 O responsável escolhe separadamente:
 
-1. personalização para a própria criança;
-2. compartilhamento com profissional;
-3. pesquisa acadêmica;
-4. treinamento coletivo;
-5. instituições autorizadas;
+1. coleta e armazenamento das amostras de voz;
+2. fine-tuning de um ASR pré-treinado para a própria criança;
+3. uso do modelo adaptado em ferramentas tecnológicas autorizadas;
+4. pesquisa acadêmica;
+5. instituições e provedores de GPU autorizados;
 6. uso comercial;
 7. prazo de armazenamento.
 
@@ -76,14 +76,13 @@ A revogação bloqueia novos acessos e treinamentos. Como remover a influência 
 
 ```text
 modelo pré-treinado em português
-  → adaptação coletiva para fala não padrão
-  → adaptador por características acústicas
-  → adaptador pessoal
+  → dataset pessoal autorizado
+  → fine-tuning descentralizado
+  → ASR adaptado à voz da criança
+  → texto, comando ou saída de comunicação
 ```
 
-Grupos devem ser definidos por características relevantes, não apenas por diagnóstico.
-
-O treinamento do modelo-base não depende dos dados individuais da criança. A personalização usa adaptadores ou ajuste fino sobre um modelo pré-treinado. Não existe uma quantidade fixa de minutos que garanta desempenho: cada estágio deve ser dimensionado por cobertura, qualidade e métricas.
+O MVP não treina um modelo-base do zero. Ele coleta dados autorizados e usa ajuste fino sobre um ASR existente. Não existe uma quantidade fixa de minutos que garanta desempenho: o dataset pessoal cresce gradualmente, e cada versão deve ser avaliada por cobertura, qualidade e métricas.
 
 ## Psyche Network
 
@@ -96,9 +95,10 @@ amostras autorizadas
   → run permissionada na Psyche
   → Coordinator e Authorizer na Solana
   → processamento nas GPUs participantes
-  → modelo ou adaptador
+  → fine-tuning do ASR pré-treinado
+  → modelo ou adaptador pessoal
   → avaliação técnica
-  → disponibilização controlada
+  → uso pela família e por ferramentas autorizadas
 ```
 
 :::warning Risco técnico
@@ -117,7 +117,11 @@ Uma run com dados sensíveis deve:
 - vincular o modelo resultante ao dataset autorizado;
 - definir política de saída e revogação para usos futuros.
 
-## Segurança mínima
+## Ganhos decorrentes: segurança e privacidade
+
+Rastreabilidade, segurança e privacidade são benefícios importantes do desenho em blockchain, mas não substituem o objetivo central: usar treinamento descentralizado para adaptar o ASR e melhorar a comunicação da criança.
+
+### Controles mínimos
 
 - runs privados ou permissionados;
 - chaves separadas por instituição;

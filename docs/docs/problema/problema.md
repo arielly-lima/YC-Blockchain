@@ -26,7 +26,7 @@ Crianças com TEA, Síndrome de Down, paralisia cerebral e condições neurológ
 | Coleta por repetição | cansaço, abandono e baixa variedade |
 | Poucos dados individuais | dificuldade para adaptar o modelo |
 | Feedback constante de erro | frustração e redução das tentativas |
-| Pouco acesso profissional | menor continuidade da prática |
+| Reconhecimento impreciso | menor autonomia para falar com a família e usar ferramentas digitais |
 
 ## Dimensão do problema no Brasil
 
@@ -50,9 +50,9 @@ Não existe um volume universal de áudio que garanta a personalização de um A
 | **Adaptação coletiva** | melhorar o desempenho para diferentes padrões de fala não padrão | requer dados de várias pessoas e deve ser dimensionada por experimentos, cobertura e métricas |
 | **Personalização individual** | ajustar um modelo já pré-treinado para uma pessoa ou tarefa | pode apresentar ganhos com poucos minutos em cenários restritos, mas não possui um limite fixo nem garantia de desempenho |
 
-Estudos de personalização de fala com alterações demonstraram ganhos com poucos minutos de gravação e avaliaram conjuntos individuais entre menos de um minuto e aproximadamente 20 minutos. Esses resultados dependem do modelo, da pessoa e da tarefa; não significam que esse volume seja suficiente para uso aberto, robusto ou clínico.
+Estudos de personalização de fala com alterações demonstraram ganhos com poucos minutos de gravação e avaliaram conjuntos individuais entre menos de um minuto e aproximadamente 20 minutos. Esses resultados dependem do modelo, da pessoa e da tarefa; não significam que esse volume seja suficiente para uso aberto e robusto.
 
-O projeto, portanto, **não pretende treinar um ASR do zero com a voz da criança**. Ele parte de um modelo pré-treinado e investiga adaptações coletivas e pessoais com dados autorizados, diversos e avaliados de forma contínua.
+O projeto, portanto, **não pretende treinar um ASR do zero com a voz da criança**. O MVP coleta amostras autorizadas, forma um dataset pessoal e realiza o **fine-tuning de um ASR já existente**, adaptando-o progressivamente à voz da criança.
 
 Sessões tradicionais de repetição tendem a gerar baixa adesão, abandono e pouca diversidade fonética. O desafio é construir representatividade ao longo do tempo sem transformar a infância em uma sessão de gravação.
 
@@ -65,21 +65,19 @@ A coleta precisa ser:
 - autorizada e transparente;
 - interessante para a criança.
 
-## Barreira social
+## Barreira comunicacional cotidiana
 
-Muitas crianças não possuem acesso regular a um fonoaudiólogo particular, vivem em regiões com pouca oferta de atendimento ou permanecem em filas de espera. Uma ferramenta digital não resolve essa desigualdade sozinha, mas pode oferecer prática geral segura e apoiar a continuidade quando existe acompanhamento.
+Uma criança pode ser compreendida pelos pais, mas continuar invisível para o tablet, o jogo, o assistente virtual ou a plataforma educacional. Quando a tecnologia erra repetidamente, a consequência não é apenas uma métrica ruim de ASR: é perda de autonomia, interrupção da conversa e desistência de usar ferramentas que já fazem parte da infância.
 
-:::warning Limite essencial
-A plataforma não deve diagnosticar, prescrever tratamento nem substituir o fonoaudiólogo.
-:::
+O ganho central do projeto é tornar essa comunicação mais assertiva. O modelo adaptado deve reconhecer melhor a intenção da criança e disponibilizá-la como texto, comando ou saída de voz para a família e para outras ferramentas tecnológicas.
 
 ## Questão de projeto
 
-> Como oferecer atividades acessíveis e envolventes que estimulem a comunicação e, ao mesmo tempo, construam dados autorizados suficientes para personalizar tecnologias de voz?
+> Como coletar voz de forma acessível e envolvente, realizar o fine-tuning descentralizado de um ASR existente e ajudar a criança a ser compreendida pelos pais e por ferramentas tecnológicas?
 
 ## Hipótese
 
-Se a coleta ocorrer durante missões significativas, com escolhas, progressão e feedback positivo, haverá maior adesão e variedade de fala. Com dados melhores, o ASR poderá compreender progressivamente cada criança e reduzir pedidos de repetição.
+Se a coleta ocorrer durante missões significativas, com escolhas, progressão e feedback positivo, haverá maior adesão e variedade de fala. Com dados melhores, o fine-tuning poderá adaptar um ASR pré-treinado à voz da criança e reduzir pedidos de repetição nas interações com a família e com ferramentas digitais.
 
 ## Próximas leituras
 

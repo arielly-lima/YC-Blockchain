@@ -1,6 +1,6 @@
 ---
 title: Público-alvo
-description: Beneficiários, usuários e parceiros institucionais
+description: Crianças, responsáveis e parceiros de infraestrutura
 sidebar_position: 2
 ---
 
@@ -12,39 +12,44 @@ A solução é orientada a **crianças com fala não padrão** que enfrentam bar
 
 São especialmente relevantes:
 
-- crianças sem acesso regular à fonoaudiologia;
-- crianças em filas de espera;
-- crianças que praticam entre sessões profissionais;
 - crianças que utilizam recursos de CAA e podem se beneficiar de uma interação de voz complementar;
 - crianças cujas formas de falar são pouco representadas em datasets;
-- famílias que buscam tecnologias assistivas mais inclusivas.
+- crianças que são compreendidas pelos pais, mas não por assistentes, jogos e aplicativos;
+- famílias que desejam apoiar pedidos, escolhas e interações cotidianas;
+- crianças que querem usar ferramentas tecnológicas com mais autonomia.
 
-## Usuários do ecossistema
+## Usuários principais
 
 | Público | Necessidade | Papel na solução |
 | --- | --- | --- |
-| **Criança** | comunicar-se com menos frustração | realiza missões e escolhe preferências |
-| **Responsável** | segurança e transparência | administra consentimentos e confirma intenções |
-| **Fonoaudiólogo** | continuidade e dados úteis | define objetivos e revisa resultados |
-| **Instituição** | atender mais pessoas com qualidade | coordena grupos e profissionais |
-| **Pesquisador** | dados representativos e governados | avalia modelos e métodos |
-| **Financiador** | impacto verificável | patrocina vagas e infraestrutura |
+| **Criança** | ser compreendida pelos pais e por tecnologias | realiza missões, grava frases e utiliza o ASR adaptado |
+| **Responsável** | compreender a intenção e controlar o uso dos dados | administra consentimentos, confirma intenções e autoriza amostras |
+
+## Parceiros da infraestrutura
+
+Parceiros não são personas da experiência infantil. Eles viabilizam o treinamento descentralizado:
+
+| Parceiro | Contribuição |
+| --- | --- |
+| **Universidades e grupos de pesquisa** | pesquisa em ASR, avaliação e capacidade computacional |
+| **Empresas de tecnologia assistiva** | integração do ASR adaptado em produtos e APIs |
+| **Provedores de GPU** | participação autorizada nas runs da Psyche |
+| **Financiadores** | apoio ao acesso, à computação e à validação |
 
 ## Parceiros potenciais
 
-- clínicas e clínicas-escola;
-- universidades e hospitais;
-- escolas públicas;
-- organizações sociais;
-- Centros Especializados em Reabilitação;
-- secretarias de saúde e educação;
-- empresas de tecnologia assistiva;
+- universidades;
 - grupos de pesquisa em fala e acessibilidade;
-- provedores autorizados de computação.
+- empresas de tecnologia assistiva;
+- desenvolvedores de jogos, assistentes e ferramentas educacionais;
+- provedores autorizados de computação;
+- organizações sociais;
+- escolas e projetos de inclusão digital;
+- fundações e patrocinadores.
 
 ## Critérios de inclusão no MVP
 
-O primeiro piloto deve ter escopo reduzido e acompanhamento especializado. Para proteger crianças, o protótipo do hackathon deve priorizar dados simulados, dados públicos compatíveis ou gravações de adultos voluntários.
+O MVP coleta gravações autorizadas, associa cada amostra à intenção confirmada pelo responsável e usa esses dados para fazer fine-tuning de um ASR pré-treinado. O protótipo do hackathon deve demonstrar o fluxo com dados seguros; testes com voz infantil real dependem de consentimento, proteção adequada e avaliação ética.
 
 :::info Princípio de desenho
 O sistema é adaptado à criança; a criança não precisa adaptar sua forma de falar para satisfazer o sistema. A voz é uma possibilidade de interação, não a única.

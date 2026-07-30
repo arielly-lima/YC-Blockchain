@@ -10,8 +10,8 @@ sidebar_position: 2
 
 ```text
 ┌──────────────────┐     ┌───────────────────┐
-│ Aplicativo       │     │ Painel            │
-│ infantil         │     │ profissional      │
+│ Aplicativo       │     │ Área do           │
+│ infantil         │     │ responsável       │
 └────────┬─────────┘     └─────────┬─────────┘
          │                         │
          └──────────┬──────────────┘
@@ -45,55 +45,64 @@ Responsável por:
 - sessões curtas e retomáveis;
 - progresso individual sem rankings.
 
-## Painel profissional
+## Área do responsável
 
 Permite:
 
-- definir objetivos e atividades;
-- selecionar palavras, frases e contextos;
-- revisar gravações autorizadas;
-- corrigir transcrições;
-- acompanhar falhas e engajamento;
-- aprovar amostras para treinamento.
+- gerenciar consentimentos por finalidade;
+- reproduzir gravações;
+- confirmar o que a criança quis dizer;
+- corrigir o rótulo da intenção;
+- autorizar ou descartar amostras para fine-tuning;
+- acompanhar a comparação entre ASR-base e adaptado.
 
 ## Motor de atividades
 
 A seleção da próxima missão considera:
 
-1. objetivo profissional, quando houver;
-2. lacunas fonéticas do dataset;
-3. baixa confiança do ASR;
-4. interesses da criança;
-5. repetição recente;
-6. complexidade linguística;
-7. fadiga e abandono.
+1. lacunas fonéticas do dataset;
+2. baixa confiança do ASR;
+3. interesses da criança;
+4. repetição recente;
+5. complexidade linguística;
+6. fadiga e abandono;
+7. frases úteis para comunicação familiar e ferramentas digitais.
 
 ## Pipeline de dados
 
 ```text
 áudio autorizado
   → verificação de qualidade
-  → validação da intenção
+  → confirmação da intenção pelo responsável
   → pseudonimização
-  → versão do dataset
-  → adaptação local ou run permissionada na Psyche/Solana
+  → versão do dataset pessoal
+  → fine-tuning de um ASR pré-treinado
+  → run permissionada na Psyche/Solana
   → avaliação WER, CER e intenção
-  → publicação controlada do adaptador
+  → publicação controlada do ASR adaptado
+  → integração com família e ferramentas tecnológicas
 ```
 
-O sistema parte de um ASR pré-treinado. O modelo-base, a adaptação coletiva e o adaptador pessoal possuem escalas de dados diferentes; nenhum número fixo de minutos é tratado como garantia de personalização.
+O MVP parte de um ASR pré-treinado e faz fine-tuning com gravações autorizadas da criança. Ele não treina um modelo do zero. A quantidade necessária de dados é determinada por qualidade, diversidade e desempenho, sem um número fixo de minutos como garantia.
 
 ## Separação de responsabilidades
 
 | Componente | Responsabilidade | Não deve fazer |
 | --- | --- | --- |
 | CAA | ampliar ou complementar formas de comunicação | depender exclusivamente do reconhecimento de voz |
-| ASR de compreensão | transcrever ou identificar intenção | avaliar habilidade clínica |
-| Avaliador de atividade | analisar objetivo definido | operar sem supervisão profissional |
-| Governança blockchain | vincular autorização, dataset, run e modelo | armazenar áudio ou prontuário |
-| Armazenamento privado | guardar dados criptografados | expor dados publicamente |
-| Psyche | distribuir o treinamento entre clientes autorizados | processar dados infantis em runs permissionless |
+| ASR-base | fornecer o ponto inicial do reconhecimento | ser apresentado como personalizado |
+| Fine-tuning | adaptar o ASR existente à voz da criança | treinar um modelo do zero |
+| Responsável | confirmar intenção e autorizar amostras | avaliar clinicamente a fala |
+| Psyche | distribuir o fine-tuning entre clientes autorizados | processar dados infantis em runs permissionless |
 | Solana | coordenar estado, participantes e etapas da run | armazenar áudio ou executar inferência em tempo real |
+| Governança blockchain | registrar referências da run e proveniência | ser apresentada como o ganho central do projeto |
+| Armazenamento privado | guardar dados criptografados | expor dados publicamente |
+
+## Hierarquia de valor da arquitetura
+
+1. **Ganho principal para a criança:** comunicação mais assertiva com pais e ferramentas tecnológicas.
+2. **Diferencial técnico:** fine-tuning descentralizado do ASR pela Psyche/Solana.
+3. **Benefícios decorrentes:** rastreabilidade, segurança, privacidade e proveniência.
 
 ## Requisitos transversais
 

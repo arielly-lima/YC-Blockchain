@@ -6,15 +6,15 @@ sidebar_position: 3
 
 # Proto-personas
 
-As personas abaixo são hipóteses de projeto. Devem ser revisadas após entrevistas e testes com famílias, profissionais e instituições.
+As personas abaixo são hipóteses de projeto. Devem ser revisadas após entrevistas e testes com crianças e responsáveis.
 
 ## Lia — criança usuária
 
 | Aspecto | Descrição |
 | --- | --- |
 | **Contexto** | usa jogos e vídeos no celular da família |
-| **Objetivo** | ser compreendida sem repetir várias vezes |
-| **Barreira** | assistentes e jogos erram sua intenção |
+| **Objetivo** | comunicar pedidos aos pais e interagir com ferramentas tecnológicas sem repetir várias vezes |
+| **Barreira** | pessoas próximas compreendem sua fala, mas assistentes, jogos e interfaces de voz erram sua intenção |
 | **Motivação** | personagens, histórias e escolhas |
 | **Necessidade** | sessões curtas, instruções simples e feedback acolhedor |
 
@@ -24,25 +24,22 @@ Lia não deve receber pontuação de “normalidade” da fala nem ser comparada
 
 Renata quer apoiar a comunicação da criança, mas precisa compreender:
 
+- o que Lia pretendeu dizer;
+- quando o modelo-base falhou e quando o modelo adaptado acertou;
 - quais dados são coletados;
 - quem pode acessá-los;
 - por quanto tempo são armazenados;
 - como revogar uma autorização;
-- o que é atividade geral e o que depende de profissional.
+- quais gravações podem ser usadas no fine-tuning;
+- como o ASR adaptado poderá apoiar a comunicação familiar e o uso de ferramentas tecnológicas.
 
 Seu controle sobre consentimento não pode ficar escondido em termos extensos ou linguagem técnica.
-
-## Dr. Rafael — fonoaudiólogo
-
-Rafael acompanha várias crianças e precisa de um painel que priorize informação relevante. Ele deseja configurar objetivos, revisar amostras específicas e entender a evolução do reconhecimento de fala sem confundir métricas técnicas com evolução clínica.
-
-## Camila — coordenadora institucional
-
-Camila trabalha em uma clínica-escola ou organização social. Ela precisa acompanhar vagas, participação, revisões pendentes e resultados agregados, preservando dados pessoais e limites de acesso.
 
 ## Hipóteses a validar
 
 1. Missões narrativas geram mais adesão do que listas de frases.
 2. Responsáveis compreendem consentimento granular quando apresentado por finalidade.
-3. Profissionais preferem revisar exceções priorizadas em vez de todas as gravações.
-4. Sessões curtas produzem dados suficientes quando distribuídas ao longo do tempo.
+3. Responsáveis conseguem confirmar a intenção comunicativa sem avaliar clinicamente a fala.
+4. Sessões curtas e recorrentes produzem amostras mais diversas do que uma coleta longa e repetitiva.
+5. O fine-tuning de um ASR pré-treinado melhora o reconhecimento da voz da criança em frases não usadas no treino.
+6. Um ASR adaptado reduz falhas na comunicação com os pais e na interação com ferramentas tecnológicas.

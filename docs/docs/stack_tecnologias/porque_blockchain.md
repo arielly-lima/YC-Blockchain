@@ -18,7 +18,14 @@ A Psyche permite que diferentes clientes contribuam para o treinamento de um mes
 - os clientes executam o processamento em suas GPUs e trocam resultados pela rede peer-to-peer;
 - contribuições computacionais podem ser registradas e, opcionalmente, associadas a incentivos.
 
-Por envolver dados de crianças, a arquitetura proposta usa **runs permissionadas**, limitadas a instituições e provedores previamente autorizados.
+Por envolver dados de crianças, a arquitetura proposta usa **runs permissionadas**, limitadas a pesquisadores e provedores previamente autorizados.
+
+Essa é a hierarquia de valor do projeto:
+
+1. **resultado para a criança:** comunicar-se com os pais e com ferramentas tecnológicas de forma mais assertiva;
+2. **diferencial da solução:** adaptar um ASR pré-treinado por meio de treinamento descentralizado;
+3. **tecnologia habilitadora:** Psyche coordena o processamento distribuído e Solana coordena a run;
+4. **ganhos decorrentes:** rastreabilidade, segurança, privacidade e auditabilidade.
 
 ## Duas camadas on-chain
 
@@ -40,13 +47,13 @@ consentimento válido
   → disponibilização controlada
 ```
 
-## Problema de confiança
+## Por que descentralizar o treinamento
 
-Famílias, clínicas, universidades, pesquisadores, financiadores e provedores de computação precisam colaborar. Nenhuma instituição deveria controlar sozinha todo o histórico de autorizações, datasets, treinamentos, contribuições e modelos.
+Universidades, pesquisadores e provedores de computação podem contribuir com capacidade de GPU para o fine-tuning sem depender de um único centro de processamento. A Psyche transforma esses recursos independentes em uma run coordenada, e a Solana mantém o estado necessário para que os participantes atuem em conjunto.
 
-A blockchain oferece um estado compartilhado e verificável entre partes que não precisam confiar em uma única operadora.
+Esse desenho amplia as possibilidades de experimentação com ASR e permite reunir capacidade computacional distribuída. A blockchain oferece ainda um estado compartilhado e verificável entre partes que não precisam confiar em uma única operadora, mas esse é um ganho decorrente — não a entrega principal ao usuário.
 
-## Registros de governança propostos
+## Ganhos decorrentes de governança
 
 | Registro | Finalidade |
 | --- | --- |
@@ -64,7 +71,7 @@ A blockchain oferece um estado compartilhado e verificável entre partes que nã
 Áudios, transcrições, nomes, documentos, contatos, idade exata, diagnósticos, prontuários, relatórios profissionais e adaptadores pessoais devem permanecer criptografados fora da rede.
 :::
 
-## Perguntas que a camada responde
+## Perguntas que a camada também permite responder
 
 - Quem autorizou?
 - Para qual finalidade?
@@ -95,6 +102,8 @@ A blockchain não deve ser usada:
 O uso é justificado se:
 
 - permitir uma run distribuída entre provedores independentes;
+- viabilizar o fine-tuning de um ASR pré-treinado para a voz da criança;
+- produzir ganho mensurável de compreensão para a família e para ferramentas tecnológicas;
 - tornar participantes e contribuições verificáveis;
 - vincular autorização, dataset, execução e modelo;
 - facilitar auditorias e colaboração institucional;

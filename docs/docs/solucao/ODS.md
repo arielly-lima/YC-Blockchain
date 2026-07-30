@@ -10,12 +10,12 @@ sidebar_position: 3
 
 | ODS | Relação com o projeto |
 | --- | --- |
-| **ODS 3 — Saúde e bem-estar** | apoia continuidade de atividades de comunicação sem substituir cuidado clínico |
+| **ODS 3 — Saúde e bem-estar** | reduz frustração e amplia participação comunicativa no cotidiano |
 | **ODS 4 — Educação de qualidade** | reduz barreiras em ferramentas educacionais baseadas em voz |
 | **ODS 9 — Indústria, inovação e infraestrutura** | promove ASR inclusivo e treinamento distribuído |
 | **ODS 10 — Redução das desigualdades** | amplia acesso de crianças pouco representadas pela tecnologia |
 | **ODS 16 — Instituições eficazes** | fortalece consentimento, auditoria e colaboração transparente |
-| **ODS 17 — Parcerias** | conecta famílias, profissionais, universidades e financiadores |
+| **ODS 17 — Parcerias** | conecta famílias, universidades, provedores de computação e empresas de tecnologia |
 
 ## Teoria de mudança
 
@@ -35,7 +35,7 @@ atividades acessíveis
 - crianças no modo gratuito;
 - vagas patrocinadas;
 - municípios e instituições participantes;
-- tempo até receber apoio profissional.
+- ferramentas tecnológicas integradas.
 
 ### Engajamento
 
@@ -53,18 +53,18 @@ atividades acessíveis
 - acerto de intenção;
 - redução de pedidos de repetição.
 
-### Apoio profissional
+### Comunicação no cotidiano
 
-- crianças supervisionadas;
-- atividades prescritas e realizadas;
-- amostras priorizadas;
-- tempo de revisão;
-- atualizações do plano profissional.
+- intenções compreendidas pelos responsáveis;
+- redução de pedidos de repetição;
+- comandos executados por ferramentas integradas;
+- frequência de uso do ASR adaptado;
+- satisfação da criança e da família.
 
 :::caution Interpretação responsável
-Melhorar WER, CER ou acerto de intenção não significa automaticamente melhorar uma condição clínica.
+Melhorar WER, CER ou acerto de intenção é evidência técnica; o impacto principal deve ser confirmado pela capacidade da criança de se comunicar com a família e com ferramentas tecnológicas.
 :::
 
 ## Proteções
 
-O impacto só é legítimo quando respeita privacidade, segurança, assentimento, consentimento e supervisão. O projeto não deve usar rankings, métricas de normalidade ou exposição pública de histórias individuais.
+O impacto só é legítimo quando respeita privacidade, segurança, assentimento e consentimento. O projeto não deve usar rankings, métricas de normalidade ou exposição pública de histórias individuais.

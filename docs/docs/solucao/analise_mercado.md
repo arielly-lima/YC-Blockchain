@@ -11,49 +11,50 @@ sidebar_position: 4
 O projeto atua na interseção de quatro mercados:
 
 - tecnologia assistiva;
-- saúde digital e apoio à fonoaudiologia;
+- comunicação aumentativa e alternativa;
 - inteligência artificial de voz;
-- infraestrutura de dados e governança.
+- infraestrutura descentralizada de treinamento.
 
-Não se trata apenas de um aplicativo infantil. A oportunidade está em uma infraestrutura capaz de conectar prática acessível, supervisão profissional, personalização de ASR e colaboração institucional.
+Não se trata apenas de um aplicativo infantil. A oportunidade está em transformar voz contextualizada em um ASR pessoal e usar capacidade computacional descentralizada para realizar esse fine-tuning.
 
 ## Alternativas atuais
 
 | Alternativa | Força | Lacuna |
 | --- | --- | --- |
-| aplicativos de exercícios | acesso simples | pouca personalização do reconhecimento |
-| atendimento tradicional | avaliação especializada | custo, filas e baixa continuidade |
+| aplicativos de comunicação | acesso simples | pouca personalização do reconhecimento da voz |
+| interfaces de CAA sem voz | comunicação por símbolos e seleção | não resolvem sozinhas a exclusão em interfaces baseadas em fala |
 | assistentes de voz generalistas | grande escala | baixa representação de fala não padrão |
 | coleta acadêmica de áudio | rigor de pesquisa | experiência repetitiva e pontual |
 | modelos genéricos de ASR | disponibilidade imediata | desempenho desigual entre pessoas |
 
 ## Diferenciação
 
-O YC Blockchain combina:
+Soluções atuais normalmente operam em silos: o aplicativo coleta, uma empresa controla a infraestrutura e o treinamento ocorre em servidores centralizados. O diferencial central do YC Blockchain é permitir que **instituições autorizadas construam o modelo em conjunto**, distribuindo computação pela Psyche e coordenando a run na Solana.
 
-1. prática contextualizada e gamificada;
+Essa entrega combina:
+
+1. coleta contextualizada e gamificada;
 2. banco de voz pessoal progressivo;
-3. separação entre compreensão e avaliação clínica;
-4. supervisão em diferentes níveis;
-5. consentimento e proveniência verificáveis;
-6. treinamento distribuído pela Psyche entre instituições autorizadas;
-7. coordenação verificável das runs descentralizadas na Solana;
-8. integração de ASR como complemento a estratégias de CAA.
+3. confirmação de intenção pelo responsável;
+4. fine-tuning de um ASR pré-treinado;
+5. treinamento distribuído pela Psyche entre participantes autorizados;
+6. coordenação das runs descentralizadas na Solana;
+7. integração do resultado com a família e com ferramentas tecnológicas;
+8. rastreabilidade, segurança e privacidade como ganhos decorrentes.
 
-O projeto não comercializa voz infantil nem propõe treinar um ASR do zero com gravações individuais. O valor econômico está nos serviços, painéis, APIs, governança e infraestrutura de treinamento.
+O valor econômico central está na infraestrutura permissionada de fine-tuning, complementada por APIs, implantação e suporte. O projeto não comercializa voz infantil nem propõe treinar um ASR do zero com gravações individuais.
 
 ## Clientes e financiadores
 
 A criança é beneficiária. Possíveis clientes e financiadores são:
 
-- clínicas e profissionais;
-- hospitais e universidades;
-- redes públicas de saúde e educação;
 - empresas de tecnologia assistiva;
-- planos de saúde;
+- desenvolvedores de ferramentas educacionais e interfaces de voz;
+- universidades e grupos de pesquisa;
+- redes públicas de educação e inclusão;
 - fundações e institutos;
 - empresas patrocinadoras;
-- grupos de pesquisa.
+- provedores de GPU.
 
 ## Estratégia de entrada
 
@@ -61,10 +62,12 @@ O caminho inicial recomendado é:
 
 ```text
 protótipo seguro
-  → validação com profissionais
-  → piloto em clínica-escola
-  → comparação técnica do ASR
-  → parceria institucional
+  → validação da experiência com famílias
+  → coleta e dataset pessoal autorizado
+  → fine-tuning de um ASR existente
+  → run permissionada mínima na Psyche/Solana
+  → integração com uma ferramenta tecnológica
+  → parceria de infraestrutura ou distribuição
   → expansão controlada
 ```
 
@@ -78,3 +81,5 @@ protótipo seguro
 - risco reputacional ao trabalhar com dados infantis.
 
 A estratégia deve priorizar credibilidade, segurança e validação antes de escala.
+
+Consulte o [Benchmarking](./banchmarking.md) para a comparação detalhada de produtos, modelos comerciais, iniciativas de dados e infraestruturas de treinamento distribuído.

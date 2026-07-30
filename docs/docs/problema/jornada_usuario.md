@@ -1,6 +1,6 @@
 ---
 title: Jornada do usuário
-description: Fluxos da criança, da família e do profissional
+description: Fluxos da criança e da família
 sidebar_position: 4
 ---
 
@@ -13,6 +13,7 @@ responsável conhece a proposta
   → recebe explicação acessível
   → escolhe finalidades autorizadas
   → criança participa do assentimento quando aplicável
+  → cria o perfil e o PIN infantil
   → preferências de acessibilidade e comunicação são configuradas
 ```
 
@@ -28,42 +29,43 @@ Usar o aplicativo não significa autorizar automaticamente pesquisa, treinamento
 | Progresso | desbloqueia novas atividades | equilibra variedade e dificuldade |
 | Encerramento | conclui uma sessão curta | registra fadiga e preferências |
 
-## Voz Livre
+## Coleta e confirmação familiar
 
 ```text
-atividade geral
-  → tentativa de comunicação
-  → identificação da intenção
-  → confirmação opcional do responsável
-  → melhoria progressiva do modelo pessoal
+criança realiza a missão
+  → navegador captura e reproduz a gravação
+  → ASR-base tenta reconhecer a intenção
+  → responsável confirma o que a criança quis dizer
+  → amostra autorizada recebe o rótulo correto
+  → dataset pessoal ganha uma nova versão
 ```
 
-Não existe diagnóstico, prescrição ou plano terapêutico individual.
+O responsável confirma a intenção comunicativa, não avalia se a fala está “correta” ou “incorreta”.
 
-## Voz Assistida
+## Fine-tuning do ASR
 
 ```text
-grupo acompanhado
-  → atividades validadas
-  → sistema identifica exceções
-  → profissional revisa itens prioritários
-  → instituição acompanha resultados agregados
+ASR pré-treinado
+  + dataset pessoal autorizado
+  → run permissionada de fine-tuning na Psyche
+  → participantes e etapas coordenados na Solana
+  → modelo ou adaptador pessoal
+  → comparação com o ASR-base
+  → disponibilização controlada
 ```
 
-## Voz Personalizada
+O MVP não treina um ASR do zero. Ele ajusta um modelo existente à voz da criança e mede se a intenção passou a ser reconhecida com mais precisão.
+
+## Uso do modelo adaptado
 
 ```text
-fonoaudiólogo define objetivos
-  → plataforma monta as missões
-  → criança pratica em casa
-  → ASR interpreta as tentativas
-  → profissional revisa os resultados
-  → plano e modelo são atualizados
+criança fala
+  → ASR adaptado reconhece a intenção
+  ├──→ responsável recebe pedido ou escolha com mais clareza
+  └──→ ferramenta tecnológica recebe texto ou comando reconhecido
 ```
 
-## Continuidade entre níveis
-
-A criança pode começar no modo gratuito e ingressar posteriormente em acompanhamento. Com autorização da família, o profissional pode aproveitar histórico, preferências, falhas do ASR e gravações permitidas como contexto — nunca como diagnóstico automático.
+O ganho principal é reduzir pedidos de repetição e permitir uma comunicação mais assertiva com os pais, jogos, assistentes e ferramentas educacionais.
 
 ## Pontos de cuidado
 
@@ -71,5 +73,7 @@ A criança pode começar no modo gratuito e ingressar posteriormente em acompanh
 - sessões devem respeitar fadiga e sobrecarga sensorial;
 - o produto não pode retirar ou desvalorizar recursos de CAA já utilizados pela criança;
 - falhas não podem produzir mensagens punitivas;
-- a família precisa distinguir compreensão técnica de avaliação clínica;
-- o profissional deve acessar apenas os dados necessários.
+- a família precisa distinguir melhora do reconhecimento de qualquer avaliação clínica;
+- amostras não autorizadas não podem entrar no fine-tuning;
+- voz e identidade permanecem fora da blockchain;
+- rastreabilidade, segurança e privacidade são benefícios da arquitetura, mas o objetivo central é o treinamento descentralizado de um ASR mais inclusivo.

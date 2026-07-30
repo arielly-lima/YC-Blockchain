@@ -2,7 +2,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'YC Blockchain',
+  title: 'Ecoa',
   tagline:
     'Comunicação acessível, gamificada e construída para compreender diferentes formas de falar.',
   favicon: 'img/mascote.png',
@@ -48,10 +48,15 @@ const config = {
     navbar: {
       title: 'Documentação',
       logo: {
-        alt: 'Mascote do projeto YC Blockchain',
+        alt: 'Lumi, mascote do Ecoa',
         src: 'img/mascote.png',
       },
       items: [
+        {
+          href: 'https://ecoa-zeta.vercel.app/',
+          label: 'Experimentar o MVP',
+          position: 'right',
+        },
         {
           href: 'https://github.com/arielly-lima/YC-Blockchain',
           label: 'GitHub',
@@ -102,7 +107,7 @@ const config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} YC Blockchain. Construído com Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Ecoa. Construído com Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

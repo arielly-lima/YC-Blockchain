@@ -1,53 +1,81 @@
 ---
 title: Proposta de valor
-description: Valor entregue a crianças, famílias, profissionais e instituições
+description: Valor entregue a crianças, famílias e ferramentas tecnológicas
 sidebar_position: 1
 ---
 
 # Proposta de valor
 
-O YC Blockchain transforma a prática de comunicação em uma experiência acessível que também produz, mediante consentimento, dados úteis para personalizar tecnologias de voz. A solução aproxima CAA e ASR sem confundi-los: amplia possibilidades de comunicação e adapta a tecnologia à criança, em vez de exigir que a criança se aproxime de uma fala padrão.
+O valor central do YC Blockchain é uma **infraestrutura permissionada de treinamento descentralizado para construir ASR mais inclusivos**. A Psyche distribui o treinamento entre GPUs de instituições autorizadas, enquanto a Solana coordena participantes e etapas da run de forma verificável.
+
+O aplicativo infantil é a porta de entrada dessa infraestrutura: coleta amostras de voz em missões contextualizadas, permite que o responsável confirme a intenção e cria um dataset pessoal autorizado. O MVP usa esse dataset para fazer **fine-tuning de um ASR pré-treinado**, adaptando-o à voz da criança.
+
+O ganho principal é permitir que a criança comunique pedidos e escolhas aos pais e interaja com assistentes, jogos e ferramentas educacionais de forma mais assertiva.
 
 ## Promessa central
 
-> Uma tecnologia que aprende a compreender a criança, preservando sua autonomia, seus dados e o papel dos profissionais.
+> Uma tecnologia que aprende a compreender a voz da criança para que ela possa se comunicar melhor com os pais e com o mundo digital — treinada de forma descentralizada pela Psyche e coordenada na Solana.
+
+## Núcleo da entrega de valor
+
+```text
+prática acessível e autorizada
+  → responsável confirma a intenção
+  → dataset pessoal versionado
+  → fine-tuning do ASR na Psyche
+  → coordenação verificável na Solana
+  → ASR adaptado à voz da criança
+  → comunicação mais assertiva com pais e tecnologias
+```
+
+A entrega de valor não termina na interface infantil. O projeto oferece ao ecossistema uma forma de **coordenar capacidade computacional, treinamento, proveniência e impacto**:
+
+| Valor central | Entrega |
+| --- | --- |
+| **Para a criança** | sua intenção é compreendida com menos repetições |
+| **Para os pais** | pedidos e escolhas são apresentados de forma mais clara |
+| **Para ferramentas tecnológicas** | texto ou comando mais confiável produzido pelo ASR adaptado |
+| **Para parceiros de pesquisa e computação** | participação em fine-tuning distribuído sem depender de uma operadora única |
+| **Para financiadores** | possibilidade de financiar acesso e computação com resultados verificáveis |
 
 ## Valor por público
 
 | Público | Problema atual | Valor entregue |
 | --- | --- | --- |
-| **Criança** | sistemas pedem repetição e geram frustração | missões acolhedoras e reconhecimento progressivamente adaptado |
-| **Família** | pouca continuidade e pouca clareza sobre dados | prática acessível e consentimento por finalidade |
-| **Fonoaudiólogo** | pouco tempo para revisar muitas interações | objetivos configuráveis e revisão priorizada |
-| **Instituição** | dificuldade de ampliar atendimento | supervisão em escala e resultados agregados |
-| **Tecnologia assistiva** | modelos pouco inclusivos | infraestrutura para ASR adaptado e governado |
-| **Financiador** | dificuldade de acompanhar impacto | vagas e resultados verificáveis sem expor crianças |
+| **Criança** | pais entendem sua fala, mas sistemas digitais falham | reconhecimento adaptado à sua voz e menos pedidos de repetição |
+| **Responsável** | precisa interpretar falhas da tecnologia e repetir comandos pela criança | confirmação de intenção, controle dos dados e comunicação mais clara |
+| **Ferramenta tecnológica** | recebe transcrições ou comandos incorretos | saída de texto ou intenção produzida por um ASR personalizado |
+| **Tecnologia assistiva** | modelos pouco inclusivos e infraestrutura centralizada | ASR adaptado por fine-tuning distribuído |
+| **Financiador** | dificuldade de acompanhar impacto e uso de recursos | vagas, computação e resultados verificáveis sem expor crianças |
 
-## Diferencial tecnológico
+## Diferencial central
 
-O diferencial não é usar blockchain como banco de dados. É combinar:
+O aplicativo pode ser reproduzido por outras plataformas. O diferencial defensável está na infraestrutura que transforma interações autorizadas em treinamento colaborativo e verificável:
 
-1. coleta contextualizada e autorizada;
-2. adaptação progressiva de modelos ASR pré-treinados;
-3. treinamento distribuído pela Psyche Network;
-4. coordenação verificável das runs descentralizadas na Solana;
-5. governança multi-institucional sem expor a voz infantil on-chain.
+1. coleta de voz contextualizada e autorizada;
+2. confirmação da intenção pelo responsável;
+3. fine-tuning de um ASR pré-treinado;
+4. treinamento distribuído pela Psyche Network;
+5. coordenação das runs descentralizadas na Solana;
+6. uso do ASR adaptado na comunicação familiar e em ferramentas tecnológicas.
 
-> **Não descentralizamos a voz das crianças. Descentralizamos, de forma permissionada, a capacidade computacional usada para construir uma IA que as compreenda.**
+Rastreabilidade, segurança e privacidade são benefícios decorrentes da arquitetura blockchain, mas não constituem a entrega principal.
 
-## Três ofertas conectadas
+> **O valor da blockchain está em descentralizar o treinamento. O valor para a criança está em ser compreendida.**
 
-### Voz Livre
+## Três entregas conectadas
 
-Acesso gratuito a atividades gerais e validadas de comunicação. Personaliza temas, duração, complexidade e estímulos, mas não cria tratamento individual.
+### Aventuras de voz
 
-### Voz Assistida
+Missões curtas e contextualizadas que capturam gravações autorizadas e variadas sem transformar a coleta em repetição cansativa.
 
-Supervisão de grupos por clínicas-escola, universidades, escolas, organizações ou serviços públicos. O sistema prioriza para revisão falhas recorrentes, baixa qualidade e queda de engajamento.
+### ASR pessoal
 
-### Voz Personalizada
+Fine-tuning de um modelo ASR já existente com o dataset autorizado da criança, seguido de comparação entre o modelo-base e o adaptado.
 
-Trilha individual configurada por fonoaudiólogo, com objetivos, vocabulário, pistas e feedbacks definidos pelo profissional.
+### Comunicação conectada
+
+Conversão da fala em intenção, texto ou comando para apoiar a comunicação com os pais e a interação com ferramentas tecnológicas.
 
 ## Princípios do produto
 
@@ -61,4 +89,4 @@ Trilha individual configurada por fonoaudiólogo, com objetivos, vocabulário, p
 
 ## Resultado esperado
 
-O sucesso não é aproximar a criança de uma fala padrão. É aumentar a capacidade da tecnologia de compreender sua intenção, ampliar oportunidades de comunicação e produzir evidências técnicas para modelos mais inclusivos.
+O sucesso não é aproximar a criança de uma fala padrão. É aumentar a capacidade do ASR de reconhecer sua intenção, reduzir pedidos de repetição e ampliar sua comunicação com os pais e com ferramentas tecnológicas.

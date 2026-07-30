@@ -34,6 +34,7 @@ const sidebars = {
         'solucao/arquitetura',
         'solucao/ODS',
         'solucao/analise_mercado',
+        'solucao/banchmarking',
         'solucao/modelo_financeiro',
       ],
     },
